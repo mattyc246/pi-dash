@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import styled from '@emotion/styled';
 
-function App() {
+import { Box, MantineProvider } from '@mantine/core';
+
+import TimeDate from './components/widgets/TimeDate';
+import Weather from './components/widgets/Weather';
+
+const Grid = styled.div`
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-gap: 0.5rem;
+`;
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MantineProvider
+      theme={{ fontFamily: 'Open Sans, sans-serif', colorScheme: 'dark' }}
+      withGlobalStyles
+      withNormalizeCSS
+    >
+      <Box p="sm" sx={(theme) => ({ height: '100vh', color: theme.white })}>
+        <Grid>
+          <TimeDate />
+          <Weather />
+        </Grid>
+      </Box>
+    </MantineProvider>
   );
-}
+};
 
 export default App;
