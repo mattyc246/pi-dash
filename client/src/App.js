@@ -5,6 +5,7 @@ import { Box, MantineProvider } from '@mantine/core';
 
 import TimeDate from './components/widgets/TimeDate';
 import Weather from './components/widgets/Weather';
+import CryptoPrices from './components/widgets/CryptoPrices';
 
 const Grid = styled.div`
   width: 100%;
@@ -26,6 +27,7 @@ const App = () => {
         <Grid>
           <TimeDate />
           <Weather />
+          <CryptoPrices />
         </Grid>
       </Box>
     </MantineProvider>
