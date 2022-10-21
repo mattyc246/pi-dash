@@ -83,8 +83,8 @@ const CryptoPrices = () => {
             currencies?.map((currency) => {
               const cData = currencyData.find((c) => c.id === currency);
               return (
-                <Grid.Col span={4}>
-                  <Card sx={(theme) => ({ color: theme.white })} key={currency}>
+                <Grid.Col key={currency} span={4}>
+                  <Card sx={(theme) => ({ color: theme.white })}>
                     <Group position="apart">
                       <Image
                         width={30}
