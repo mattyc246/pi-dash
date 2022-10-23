@@ -43,7 +43,7 @@ const Weather = () => {
       >
         <Center sx={{ height: '100%', width: '100%' }}>
           <Box>
-            <Text weight={600} size="xl">
+            <Text align="center" weight={600} size="xl">
               Kuala Lumpur, MY
             </Text>
             <Group position="center" py="xs">
