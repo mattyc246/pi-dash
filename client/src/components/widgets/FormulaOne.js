@@ -81,13 +81,13 @@ const FormulaOne = () => {
             <Grid sx={{ height: '100%' }}>
               <Grid.Col span={12}>
                 <Group position="apart">
-                  <Badge variant="filled" color="dark" size="md" radius="xs">
+                  <Badge variant="light" color="dark" size="md" radius="xs">
                     Round {upcomingRace?.round}
                   </Badge>
-                  <Badge variant="filled" color="dark" size="md" radius="xs">
+                  <Badge variant="light" color="dark" size="md" radius="xs">
                     {upcomingRace?.track}
                   </Badge>
-                  <Badge variant="filled" color="dark" size="md" radius="xs">
+                  <Badge variant="light" color="dark" size="md" radius="xs">
                     {upcomingRace?.season} Season
                   </Badge>
                 </Group>
