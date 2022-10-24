@@ -30,18 +30,9 @@ const to2Digits = (number) => {
   });
 };
 
-const FormulaOne = () => {
+const FormulaOne = ({ timeNow }) => {
   const [loading, setIsLoading] = useState(true);
-  const [timeNow, setTimeNow] = useState(moment());
   const [upcomingRace, setUpcomingRace] = useState(null);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTimeNow(moment());
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   useEffect(() => {
     const matchingRace = races.find((race) =>
@@ -84,7 +75,13 @@ const FormulaOne = () => {
                   <Badge variant="light" color="dark" size="md" radius="xs">
                     Round {upcomingRace?.round}
                   </Badge>
-                  <Badge variant="light" color="dark" size="md" radius="xs">
+                  <Badge
+                    variant="light"
+                    color="dark"
+                    size="md"
+                    radius="xs"
+                    sx={{ flex: 1 }}
+                  >
                     {upcomingRace?.track}
                   </Badge>
                   <Badge variant="light" color="dark" size="md" radius="xs">

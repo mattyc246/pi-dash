@@ -7,14 +7,14 @@ import GridCol from '../GridCol';
 import { fetchWeatherData } from '../../api/weather';
 import { renderWeatherIcon } from '../../services/weather';
 
-const Weather = () => {
+const Weather = ({ settings }) => {
   const [description, setDescription] = useState('Thunderstorm');
   const [temperature, setTemperature] = useState(30);
   const [iconId, setIconId] = useState('10d');
 
   useEffect(() => {
     const getWeather = async () => {
-      const response = await fetchWeatherData(3.1466, 101.6958);
+      const response = await fetchWeatherData(settings?.lat, settings?.long);
 
       if (response?.isSuccess) {
         setDescription(response?.data?.weather[0]?.description);
@@ -30,7 +30,7 @@ const Weather = () => {
     getWeather();
 
     return () => clearInterval(interval);
-  }, []);
+  }, [settings]);
 
   return (
     <GridCol colStart={1} colEnd={5} rowStart={5} rowEnd={13}>
@@ -44,7 +44,7 @@ const Weather = () => {
         <Center sx={{ height: '100%', width: '100%' }}>
           <Box>
             <Text align="center" weight={600} size="xl">
-              Kuala Lumpur, MY
+              {settings?.location}
             </Text>
             <Group position="center" py="xs">
               {renderWeatherIcon(iconId, 60)}

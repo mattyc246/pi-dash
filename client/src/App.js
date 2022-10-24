@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 
 import { Box, MantineProvider } from '@mantine/core';
@@ -8,6 +8,7 @@ import Weather from './components/widgets/Weather';
 import CryptoPrices from './components/widgets/CryptoPrices';
 import FormulaOne from './components/widgets/FormulaOne';
 import Buttons from './components/widgets/Buttons';
+import moment from 'moment';
 
 const Grid = styled.div`
   width: 100%;
@@ -19,6 +20,26 @@ const Grid = styled.div`
 `;
 
 const App = () => {
+  const [timeNow, setTimeNow] = useState(moment());
+  const [settings, setSettings] = useState({
+    crypto: {
+      liveUpdate: true
+    },
+    weather: {
+      lat: 3.1466,
+      long: 101.6958,
+      location: 'Kuala Lumpur, MY'
+    }
+  });
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTimeNow(moment());
+    }, 500);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <MantineProvider
       theme={{ fontFamily: 'Open Sans, sans-serif', colorScheme: 'dark' }}
@@ -27,11 +48,14 @@ const App = () => {
     >
       <Box p="sm" sx={(theme) => ({ height: '100vh', color: theme.white })}>
         <Grid>
-          <TimeDate />
-          <Weather />
-          <CryptoPrices />
-          <FormulaOne />
-          <Buttons />
+          <TimeDate timeNow={timeNow} />
+          <Weather settings={settings?.weather} />
+          <CryptoPrices settings={settings?.crypto} />
+          <FormulaOne timeNow={timeNow} />
+          <Buttons
+            settings={settings}
+            updateSettings={(updatedSettings) => setSettings(updatedSettings)}
+          />
         </Grid>
       </Box>
     </MantineProvider>
