@@ -18,7 +18,7 @@ import { getCurrencyIcon } from '../../services/crypto';
 
 const currencies = ['bitcoin', 'ethereum', 'chainlink'];
 
-const CryptoPrices = () => {
+const CryptoPrices = ({ settings }) => {
   const [loading, setIsLoading] = useState(true);
   const [currencyData, setCurrencyData] = useState(null);
 
@@ -52,12 +52,14 @@ const CryptoPrices = () => {
       );
 
       ws.onmessage = (msg) => {
-        updateCurrencyData(JSON.parse(msg.data));
+        if (settings?.liveUpdate) {
+          updateCurrencyData(JSON.parse(msg.data));
+        }
       };
 
       return () => ws.close();
     }
-  }, [currencyData]);
+  }, [currencyData, settings]);
 
   useEffect(() => {
     fetchCurrencies();

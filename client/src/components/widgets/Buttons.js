@@ -3,9 +3,11 @@ import React from 'react';
 import { ActionIcon, Box, Stack } from '@mantine/core';
 
 import GridCol from '../GridCol';
-import { IconSettings, IconSquareX } from '@tabler/icons';
+import Settings from '../Settings';
 
-const Buttons = () => {
+import { IconSquareX } from '@tabler/icons';
+
+const Buttons = ({ settings, updateSettings }) => {
   return (
     <GridCol colStart={12} colEnd={13} rowStart={5} rowEnd={10}>
       <Box
@@ -19,9 +21,7 @@ const Buttons = () => {
         })}
       >
         <Stack align="center" justify="space-evenly" sx={{ height: '100%' }}>
-          <ActionIcon color="blue" size="lg" radius="md" variant="light">
-            <IconSettings size={26} />
-          </ActionIcon>
+          <Settings settings={settings} updateSettings={updateSettings} />
           <ActionIcon
             onClick={() => window.document.exitFullscreen()}
             color="red"

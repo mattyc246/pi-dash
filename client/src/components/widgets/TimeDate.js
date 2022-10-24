@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import moment from 'moment';
 
 import { Box, Group, Text } from '@mantine/core';
@@ -6,17 +6,7 @@ import { IconClock } from '@tabler/icons';
 
 import GridCol from '../GridCol';
 
-const TimeDate = () => {
-  const [time, setTime] = useState(moment());
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTime(moment());
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
-
+const TimeDate = ({ timeNow }) => {
   return (
     <GridCol colStart={1} colEnd={6} rowStart={1} rowEnd={5}>
       <Box
@@ -31,12 +21,12 @@ const TimeDate = () => {
         <Group p="sm">
           <IconClock size={30} />
           <Text sx={{ flex: 1 }} size="xl" weight="bold" align="center">
-            {moment(time).format('dddd Do MMM YYYY')}
+            {moment(timeNow).format('ddd Do MMM YYYY')}
           </Text>
         </Group>
         <Box sx={{ flex: 1 }}>
           <Text size="3rem" weight={800} align="center">
-            {moment(time).format('h:mm:ss A')}
+            {moment(timeNow).format('h:mm:ss A')}
           </Text>
         </Box>
       </Box>
