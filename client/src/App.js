@@ -26,8 +26,8 @@ const App = () => {
       liveUpdate: true
     },
     weather: {
-      lat: 3.1466,
-      long: 101.6958,
+      lat: 3.158595,
+      long: 101.705109,
       location: 'Kuala Lumpur, MY'
     }
   });

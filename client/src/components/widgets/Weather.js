@@ -18,7 +18,7 @@ const Weather = ({ settings }) => {
 
       if (response?.isSuccess) {
         setDescription(response?.data?.weather[0]?.description);
-        setTemperature(response?.data?.main.temp / 10);
+        setTemperature(response?.data?.main.temp);
         setIconId(response?.data?.weather[0]?.icon);
       }
     };
