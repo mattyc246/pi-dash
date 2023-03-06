@@ -50,7 +50,7 @@ const Weather = ({ settings }) => {
               {renderWeatherIcon(iconId, 60)}
             </Group>
             <Text weight={600} align="center" size="3rem">
-              {temperature.toFixed(1)}°C
+              {temperature?.toFixed(1)}°C
             </Text>
             <Text weight={600} align="center" px="md" transform="capitalize">
               {description}
