@@ -6,6 +6,7 @@ import Catalunya from '../assets/images/catalunya.png';
 import China from '../assets/images/china.png';
 import Cota from '../assets/images/cota.png';
 import Ferrari from '../assets/images/ferrari.png';
+import LasVegas from '../assets/images/las-vegas.png';
 import MarinaBay from '../assets/images/marina-bay.png';
 import Melbourne from '../assets/images/melbourne.png';
 import Mexico from '../assets/images/mexico.png';
@@ -258,7 +259,7 @@ export const races = [
     country: 'Saudi Arabia',
     circuitDiagram: Saudi,
     flag: '🇸🇦',
-    date: '20230319T010000+0800'
+    date: '20230320T010000+0800'
   },
   {
     id: 25,
@@ -274,16 +275,6 @@ export const races = [
     id: 26,
     season: 2023,
     round: 4,
-    track: 'Shanghai International Circuit',
-    country: 'China',
-    circuitDiagram: China,
-    flag: '🇨🇳',
-    date: '20230416T130000+0800'
-  },
-  {
-    id: 27,
-    season: 2023,
-    round: 5,
     track: 'Baku City Circuit',
     country: 'Azerbaijan',
     circuitDiagram: Baku,
@@ -291,19 +282,19 @@ export const races = [
     date: '20230430T190000+0800'
   },
   {
-    id: 28,
+    id: 27,
     season: 2023,
-    round: 6,
+    round: 5,
     track: 'Miami International Autodrome',
     country: 'USA',
     circuitDiagram: Miami,
     flag: '🇺🇸',
-    date: '20230507T033000+0800'
+    date: '20230508T033000+0800'
   },
   {
-    id: 29,
+    id: 28,
     season: 2023,
-    round: 7,
+    round: 6,
     track: 'Autodromo Enzo e Dino Ferrari',
     country: 'Italy',
     circuitDiagram: Ferrari,
@@ -311,9 +302,9 @@ export const races = [
     date: '20230421T210000+0800'
   },
   {
-    id: 30,
+    id: 29,
     season: 2023,
-    round: 8,
+    round: 7,
     track: 'Circuit de Monaco',
     country: 'Monaco',
     circuitDiagram: Monaco,
@@ -321,9 +312,9 @@ export const races = [
     date: '20230528T210000+0800'
   },
   {
-    id: 31,
+    id: 30,
     season: 2023,
-    round: 9,
+    round: 8,
     track: 'Circuit de Barcelona-Catalunya',
     country: 'Spain',
     circuitDiagram: Catalunya,
@@ -331,19 +322,19 @@ export const races = [
     date: '20230604T210000+0800'
   },
   {
-    id: 32,
+    id: 31,
     season: 2023,
-    round: 10,
+    round: 9,
     track: 'Circuit Gilles Villeneuve',
     country: 'Canada',
     circuitDiagram: Canada,
     flag: '🇨🇦',
-    date: '20230618T020000+0800'
+    date: '20230619T020000+0800'
   },
   {
-    id: 33,
+    id: 32,
     season: 2023,
-    round: 11,
+    round: 10,
     track: 'Red Bull Ring',
     country: 'Austria',
     circuitDiagram: RedBullRing,
@@ -351,9 +342,9 @@ export const races = [
     date: '20230702T210000+0800'
   },
   {
-    id: 34,
+    id: 33,
     season: 2023,
-    round: 12,
+    round: 11,
     track: 'Silverstone Circuit',
     country: 'Great Britain',
     circuitDiagram: Silverstone,
@@ -361,18 +352,18 @@ export const races = [
     date: '20230709T220000+0800'
   },
   {
-    id: 35,
+    id: 34,
     season: 2023,
-    round: 13,
+    round: 12,
     track: 'Hungaroring',
     country: 'Hungary',
     flag: '🇭🇺',
     date: '20230723T210000+0800'
   },
   {
-    id: 36,
+    id: 35,
     season: 2023,
-    round: 14,
+    round: 13,
     track: 'Spa-Francorchamps',
     country: 'Belgium',
     circuitDiagram: Spa,
@@ -380,9 +371,9 @@ export const races = [
     date: '20230730T210000+0800'
   },
   {
-    id: 37,
+    id: 36,
     season: 2023,
-    round: 15,
+    round: 14,
     track: 'Circuit Zandvoort',
     country: 'Netherlands',
     circuitDiagram: Zandvoort,
@@ -390,9 +381,9 @@ export const races = [
     date: '20230827T210000+0800'
   },
   {
-    id: 38,
+    id: 37,
     season: 2023,
-    round: 16,
+    round: 15,
     track: 'Autodromo Nazionale Monza',
     country: 'Italy',
     circuitDiagram: Monza,
@@ -400,9 +391,9 @@ export const races = [
     date: '20230903T210000+0800'
   },
   {
-    id: 39,
+    id: 38,
     season: 2023,
-    round: 17,
+    round: 16,
     track: 'Marina Bay Street Circuit',
     country: 'Singapore',
     circuitDiagram: MarinaBay,
@@ -410,9 +401,9 @@ export const races = [
     date: '20230917T200000+0800'
   },
   {
-    id: 40,
+    id: 39,
     season: 2023,
-    round: 18,
+    round: 17,
     track: 'Suzuka Circuit',
     country: 'Japan',
     circuitDiagram: Suzuka,
@@ -420,59 +411,59 @@ export const races = [
     date: '20230924T130000+0800'
   },
   {
-    id: 41,
+    id: 40,
     season: 2023,
-    round: 19,
+    round: 18,
     track: 'Lusail Circuit',
     country: 'Qatar',
     circuitDiagram: Qatar,
     flag: '🇶🇦',
-    date: '20231008T130000+0800'
+    date: '20231008T220000+0800'
+  },
+  {
+    id: 41,
+    season: 2023,
+    round: 19,
+    track: 'Circuit of the Americas',
+    country: 'USA',
+    circuitDiagram: Cota,
+    flag: '🇺🇸',
+    date: '20231023T030000+0800'
   },
   {
     id: 42,
     season: 2023,
     round: 20,
-    track: 'Circuit of the Americas',
-    country: 'USA',
-    circuitDiagram: Cota,
-    flag: '🇺🇸',
-    date: '20231022T030000+0800'
+    track: 'Autódromo Hermanos Rodríguez',
+    country: 'Mexico',
+    circuitDiagram: Mexico,
+    flag: '🇲🇽',
+    date: '20231030T040000+0800'
   },
   {
     id: 43,
     season: 2023,
     round: 21,
-    track: 'Autódromo Hermanos Rodríguez',
-    country: 'Mexico',
-    circuitDiagram: Mexico,
-    flag: '🇲🇽',
-    date: '20231029T040000+0800'
+    track: 'Autódromo José Carlos Pace',
+    country: 'Brazil',
+    circuitDiagram: Brazil,
+    flag: '🇧🇷',
+    date: '20231106T020000+0800'
   },
   {
     id: 44,
     season: 2023,
     round: 22,
-    track: 'Autódromo José Carlos Pace',
-    country: 'Brazil',
-    circuitDiagram: Brazil,
-    flag: '🇧🇷',
-    date: '20231105T020000+0800'
+    track: 'Las Vegas Street Circuit',
+    country: 'USA',
+    circuitDiagram: LasVegas,
+    flag: '🇺🇸',
+    date: '20231118T140000+0800'
   },
   {
     id: 45,
     season: 2023,
     round: 23,
-    track: 'Las Vegas Street Circuit',
-    country: 'USA',
-    circuitDiagram: Cota,
-    flag: '🇺🇸',
-    date: '20231118T020000+0800'
-  },
-  {
-    id: 45,
-    season: 2023,
-    round: 24,
     track: 'Yas Marina Circuit',
     country: 'Abu Dhabi',
     circuitDiagram: YasMarina,
